@@ -29,7 +29,7 @@ class CartaTest {
     void shouldTestCarta() throws InterruptedException {
 // загрузить страницу
         driver.get("http://localhost:9999/");
-        Thread.sleep(5000);
+       // Thread.sleep(5000);
 // поиск элементов
 // взаимодействие с элементами
 
