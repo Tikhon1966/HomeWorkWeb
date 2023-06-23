@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CartaTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     static void setUpAll() {
