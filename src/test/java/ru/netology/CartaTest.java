@@ -42,12 +42,11 @@ class CartaTest {
     @Test
     void shouldTestCarta() {
         driver.get("http://localhost:9999/");
-        List<WebElement> elements = (List<WebElement>) driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Петров Иван");
-        elements.get(1).sendKeys("+79161111111");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иван Петров-Иванов");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79161111111");
         driver.findElement(By.className("checkbox__text")).click();
         driver.findElement(By.className("button__text")).click();
-        String text = driver.findElement(By.className("paragraph_theme_alfa-on-white")).getText();
+        String text = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
     }
 
